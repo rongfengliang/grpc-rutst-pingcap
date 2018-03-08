@@ -1,0 +1,14 @@
+syntax="proto3";
+package dalongdemo;
+service UserLogin{
+    rpc Login(UserRequest) returns(UserResponse){};
+}
+message UserRequest{
+    string name=1;
+    string age=2;
+}
+message UserResponse{
+    int32 code =1;
+    string message=2;
+    string result=3;
+}

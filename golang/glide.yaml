@@ -1,0 +1,19 @@
+package: github.com/rongfengliang/grpc-rs/golang
+import:
+- package: github.com/golang/protobuf
+  version: ^1.0.0
+  subpackages:
+  - proto
+- package: golang.org/x/net/context
+  repo: https://github.com/golang/net.git
+- package: google.golang.org/grpc
+  version: ^1.10.0
+  repo: https://github.com/grpc/grpc-go.git
+- package: golang.org/x/net/http2
+  repo: https://github.com/golang/net.git
+- package: golang.org/x/net/trace
+  repo: https://github.com/golang/net.git
+- package: google.golang.org/genproto/googleapis/rpc/status
+  repo: https://github.com/google/go-genproto.git
+- package: golang.org/x/net/http2/hpack
+  repo: https://github.com/golang/net.git

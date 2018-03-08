@@ -1,0 +1,23 @@
+version: '3'
+services:
+  rpcserver:
+    image: rpcserver-rust
+    build:
+      context: .
+      dockerfile: Dockerfile-server
+  rpclient-rust:
+    image: rpc-client-rust
+    build:
+      context: .
+      dockerfile: Dockerfile-cli-rust
+    depends_on:
+      - rpcserver
+  rpclient-golang:
+    image: rpc-client-golang
+    build:
+      context: .
+      dockerfile: Dockerfile-cli-golang
+    depends_on:
+      - rpcserver
+  
+  
