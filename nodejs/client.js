@@ -3,7 +3,7 @@ const user_grpc = require("./proto/user_grpc_pb");
 const user = require("./proto/user_pb");
 
 function main() {
-    var client = new user_grpc.UserLoginClient('localhost:50052',
+    var client = new user_grpc.UserLoginClient('47.52.58.151:50051',
         grpc.credentials.createInsecure());
     var request = new user.UserRequest();
     request.setName("dalongdemo");
