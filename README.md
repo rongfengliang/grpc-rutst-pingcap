@@ -14,6 +14,17 @@ just like :
 protoc --rust_out=src --grpc_out=src --plugin=protoc-gen-grpc=/Users/dalong/.cargo/bin/grpc_rust_plugin proto/user.proto
 
 ```
+* golang code generate
+
+```bash
+protoc -I proto/ proto/user.proto --go_out=plugins=grpc:./golang/service/proto
+```
+
+* python
+
+```bash
+python2 -m grpc_tools.protoc -I proto --python_out=./python --grpc_python_out=./python  proto/user.proto
+```
 
 *  prequire
 
