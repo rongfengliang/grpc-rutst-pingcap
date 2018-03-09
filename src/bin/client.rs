@@ -9,7 +9,7 @@ use grpc_rs::user_grpc::UserLoginClient;
 
 fn main(){
    let env = Arc::new(EnvBuilder::new().build());
-    let ch = ChannelBuilder::new(env).connect("rpcserver:50051");
+    let ch = ChannelBuilder::new(env).connect("localhost:50052");
     let client = UserLoginClient::new(ch);
     let mut req = UserRequest::new();
     req.set_name("world".to_owned());

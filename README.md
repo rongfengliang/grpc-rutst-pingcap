@@ -26,6 +26,14 @@ protoc -I proto/ proto/user.proto --go_out=plugins=grpc:./golang/service/proto
 python2 -m grpc_tools.protoc -I proto --python_out=./python --grpc_python_out=./python  proto/user.proto
 ```
 
+* nodejs code generate (static code generate)
+
+```bash
+npm install -g grpc-tools // maybe you need add --unsafe-perm
+
+grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./nodejs --grpc_out=./nodejs --plugin=protoc-ge
+n-grpc=/usr/local/lib/node_modules/grpc-tools/bin/grpc_node_plugin ./proto/user.proto
+```
 *  prequire
 
 ```bash
