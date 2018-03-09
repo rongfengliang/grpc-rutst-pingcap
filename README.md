@@ -20,7 +20,7 @@ protoc --rust_out=src --grpc_out=src --plugin=protoc-gen-grpc=/Users/dalong/.car
 protoc -I proto/ proto/user.proto --go_out=plugins=grpc:./golang/service/proto
 ```
 
-* python
+* python code generate
 
 ```bash
 python2 -m grpc_tools.protoc -I proto --python_out=./python --grpc_python_out=./python  proto/user.proto

@@ -2,7 +2,7 @@
 FROM golang:1.9-alpine AS build-env
 RUN apk --no-cache add build-base git bzr mercurial gcc
 ENV D=/go/src/github.com/rongfengliang/grpc-rs/golang
-ADD golang/* $D
+ADD golang/* $D/
 RUN cd $D && go build -o grpc-client && cp grpc-client /tmp/
 
 FROM alpine:latest

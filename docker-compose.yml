@@ -19,5 +19,11 @@ services:
       dockerfile: Dockerfile-cli-golang
     depends_on:
       - rpcserver
-  
+  rpclient-python:
+    image: rpc-client-python
+    build:
+      context: ./python
+      dockerfile: Dockerfile-cli-python
+    depends_on:
+      - rpcserver
   
