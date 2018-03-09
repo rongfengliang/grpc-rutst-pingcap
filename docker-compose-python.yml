@@ -1,0 +1,22 @@
+version: '3'
+services:
+  rpcserver:
+    image: rpcserver-rust
+    build:
+      context: .
+      dockerfile: Dockerfile-server
+  rpclient-rust:
+    image: rpc-client-rust
+    build:
+      context: .
+      dockerfile: Dockerfile-cli-rust
+    depends_on:
+      - rpcserver
+  rpclient-python:
+    image: rpc-client-python
+    build:
+      context: ./python
+      dockerfile: Dockerfile-cli-python
+    depends_on:
+      - rpcserver
+  
