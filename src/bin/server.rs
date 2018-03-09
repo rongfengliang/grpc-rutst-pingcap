@@ -30,7 +30,7 @@ fn main(){
     let service = user_grpc::create_user_login(UserServiceImpl);
     let mut server = ServerBuilder::new(env)
         .register_service(service)
-        .bind("127.0.0.1", 50051)
+        .bind("0.0.0.0", 50051)
         .build()
         .unwrap();
     server.start();
