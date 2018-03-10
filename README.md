@@ -34,6 +34,13 @@ npm install -g grpc-tools // maybe you need add --unsafe-perm
 grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./nodejs --grpc_out=./nodejs --plugin=protoc-ge
 n-grpc=/usr/local/lib/node_modules/grpc-tools/bin/grpc_node_plugin ./proto/user.proto
 ```
+
+* csharp code generate
+
+```bash
+csharp/Grpc.Tools.1.10.0/tools/macosx_x64/protoc -I. ./proto/user.proto --csharp_out csharp/src --grpc_out csharp/src --plugin=protoc-gen-grpc=csharp/Grpc.Tools.1.10.0/tools/macosx_x64/grpc_csharp_plugin
+
+```
 *  prequire
 
 ```bash

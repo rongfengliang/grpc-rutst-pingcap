@@ -1,5 +1,6 @@
 syntax="proto3";
 option go_package="service";
+option csharp_namespace = "userservice";
 service UserLogin{
     rpc Login(UserRequest) returns(UserResponse){};
 }
