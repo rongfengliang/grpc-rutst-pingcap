@@ -1,6 +1,6 @@
 # grpcio (pingcap)
 
-*  generate code
+* rustlang generate code
 
 ```bash
 cargo install protobuf
@@ -47,7 +47,7 @@ csharp/Grpc.Tools.1.10.0/tools/macosx_x64/protoc -I. ./proto/user.proto --csharp
 cargo update && cargo build
 ```
 
-*  run
+*  run (rustlang)
 
 ```bash
 cd src/bin
